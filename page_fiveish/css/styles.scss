@@ -1,0 +1,724 @@
+@import '../../bower_components/bootstrap-sass/assets/stylesheets_fiveish/_bootstrap.scss';
+/* @import '../bower_components/font-awesome/scss/font-awesome.scss'; */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,200);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:700,500,400,200);
+
+$red: rgb(236, 45, 45);
+$dred: rgb(203, 23, 23);
+$gray: rgb(77, 77, 77);
+$lrgray: rgb(163, 163, 163);
+$bluegray: rgb(67, 77, 84);
+$green: rgb(15, 132, 51);
+$car_bg: rgb(236, 223, 211);
+$social: rgb(217, 202, 187);
+
+@mixin 	gr_abs($t, $l) {
+			position: absolute;
+			top: $t;
+			left: $l;
+		}
+@mixin  w_h($w, $h) {
+			width: $w;
+			height: $h;
+}
+
+
+* {
+	h1, h2, h3, h4, p, a { font-family: 'Ubuntu', sans-serif; margin: 0; }
+	a:hover { text-decoration: none; }
+	a:focus { outline: none; color: rgb(220, 220, 220) !important; }
+	li { list-style: none;  }
+	.bg_red {
+		background-color: $red;
+	}
+	.bg_gray {
+		background-color: $gray;
+	}
+	.stick {
+		position: fixed !important;
+		top: 40px !important; 
+	}
+}
+
+																// ******************** 
+																//						MOBILE HEADER 
+																//										****************************** 
+header {
+	background-color: $red;
+	.row { background: $dred; }
+
+	#head_first {
+		padding: 0;
+		nav { 
+			background: $dred;
+			border: none;
+			margin: 0;
+			min-height: 1px;
+			// *** MAIN NAVBAR
+			#navb {
+				padding: 0;
+				border: none;
+				position: fixed;
+				@include w_h(30%, 100%);
+				right: -30%;
+				background: white;
+				z-index: 100;
+				
+				div[class*=col] {
+					width: 100%;
+					text-align: center;
+				}
+				.nav > li {
+					display: block;
+					a {
+						padding: 10px;
+						&:hover { 
+							background-color: $car_bg; 
+							color: black;  
+						} 
+					}
+				}
+				h3 { 
+					vertical-align: middle; 
+					font-weight: 300; 
+					font-size: 16px; 
+					line-height: 40px;
+					&#head_h3_right { white-space: nowrap; }
+					&#city_ { margin: 0 8px 0 5px; }
+				}  
+
+				h3, ul, li { display: inline-block; }
+				a, h3, i { color: rgb(251, 141, 131); }
+			}
+		}
+	}
+
+	#head_second {
+		img { width: 100%; }
+		#bttn_n_search {
+			text-align: right;
+			a.fa { 
+				font-size: 42px; 
+				margin-right: 20%; 
+			}
+			button { 
+				float: none;
+				position: relative;
+			    margin-right: 15px;
+			    padding: 9px 10px;
+			    margin-top: 8px;
+			    margin-bottom: 8px;
+			    background-color: transparent;
+			    background-image: none;
+				span {
+					background: white;
+					@include w_h(40px, 4px);
+					margin-top: 9px !important;
+				}
+			}
+		}
+	}
+
+	#head_third {
+		ul {
+			width: 100%;
+			padding: 0 15px;
+			display: flex;
+			justify-content: space-between;
+			li {
+				display: inline-block;
+				font-size: 25px;
+				margin-bottom: 35px;
+				a { font-size: 20px; }
+			}
+		}
+	}
+
+	#head_second, #head_third {
+		display: flex;
+		align-items: center;
+		padding: 30px 0 0;
+		a { color: white; }
+	}
+	//cause its position in the flow depends on screen size
+	#login_bttn {
+		color: white;
+	    background: $red;
+	    border: 1px solid $red;
+	    border-radius: 20px;
+	    padding: 7.5px 15px;
+	    margin: 0 auto;
+	    display: block;
+	}
+}
+																// ******************** 
+																//						MOBILE MAIN 
+																//										******************************
+main {
+	// MAIN GRADIENT 
+	.grad {
+		background: rgb(243, 243, 243); /* For browsers that do not support gradients */
+    	background: -webkit-linear-gradient(white, rgb(240, 240, 240)); /* For Safari 5.1 to 6.0 */
+    	background: -o-linear-gradient(white, rgb(240, 240, 240)); /* For Opera 11.1 to 12.0 */
+    	background: -moz-linear-gradient(white, rgb(240, 240, 240)); /* For Firefox 3.6 to 15 */
+    	background: linear-gradient(white, rgb(240, 240, 240)); /* Standard syntax */
+	}
+
+	#carousel_head {
+		background-color: $car_bg;
+		.carousel-caption {
+			text-shadow: none;
+			&.car_c_1 {
+				text-align: left;
+				left: 0;
+				top: 0;
+				h1, h2, h3, h4, p {
+					color: black;
+				}
+				h2 {
+					font-size: 50px;
+					font-weight: 700;
+				}
+				h3, p { font-weight: 300; }
+				h3 { margin: 40px 0 25px; }
+				p { margin-top: 30px; }
+			}
+			&.car_c_2 {
+				display: inline-block;
+				@include w_h(120px, 120px);
+				background: url(../images/price.png) center center;
+				background-size: cover;
+				right: 0;
+
+				h3.car_old_price {
+					font-size: 38px;
+					position: absolute;
+					left: 14px;
+					
+					&:after {
+						content: '';
+						@include w_h(40px, 2px);
+						background: white;
+						display: block;
+						-ms-transform: rotate(-30deg); /* IE 9 */
+					    -webkit-transform: rotate(-30deg); /* Safari */
+					    transform: rotate(-30deg);
+					    position: relative;
+					    top: 13px;
+					    z-index: 999;
+					}
+				}
+				h3.car_new_price { 
+					position: absolute;
+					left: 16px;
+					bottom: 32px;
+					font-size: 20px;
+					color: $bluegray;
+				}
+				h3.car_saved_ps {
+					position: absolute;
+					bottom: 16px;
+					left: 61px;
+					font-size: 18px;
+				}
+				h3 {
+					display: inline-block;
+					margin: 0;
+				}
+			}
+		}
+		.item > img {
+			margin: 0 auto;
+			padding: 225px 0 20px;
+		}
+		.carousel-indicators {
+			left: 8%;
+			li {
+				@include w_h(15px, 15px);
+				border: 2px solid $social;
+				margin-right: 25px;
+				&.active { background: $red; }
+			}
+		}
+	}
+	#social {
+		margin: 25px 0 75px;
+		a {
+			font-size: 30px;
+			color: $social;
+			border: 2px solid;
+			border-radius: 50%; 
+			padding: 16px;
+			display: inline-block;
+			margin-right: 30px;
+			&:nth-child(2) { padding: 16px 20px; }
+			&:last-child { padding: 16px 19px; }
+		}
+	}
+	#recipes {
+		margin-bottom: 30px;
+
+		h2 { float: left; }
+		h3 { 
+			float: right; 
+			padding-top: 6px;
+		}
+		.more {
+			width: 50%;
+			margin: 0px auto;
+			display: block;
+			padding: 30px 0px;
+			background: $green none repeat scroll 0% 0%;
+			color: white;
+			font-size: 20px;
+			border: 3px solid white;
+			border-radius: 60px;
+		}
+		.img_recipe {
+			padding: 0;
+			margin: 30px 0;
+			background-color: white;
+			border: 0px solid white;
+	    	border-radius: 15px;
+	    	overflow: hidden;
+	    	box-sizing: border-box;
+			img {
+				width: 100%;
+				height: 335px;
+	    	}
+	    	.recipe_circle {
+	    		display: inline-block;
+				@include w_h(100px, 100px);
+				background: url(../images/green.png) center center;
+				background-size: cover;
+				right: 4%;
+				bottom: 38%;
+				position: absolute;
+				p {
+					display: inline-block;
+					color: white;
+					position: absolute;
+					top: 27%;
+					left: 16%;
+					font-size: 34px;
+				}
+	    	}
+	    	.recipe_tags p {
+				display: inline-block;
+				margin: 40px 0 35px;
+				color: rgb(204, 204, 204);
+				&:first-child:before {
+					content: '';
+					display: inline-block;
+					@include w_h(26px, 23px);
+					background: url(../images/veg.png);
+					background-size: cover;
+				}
+	    	}
+	    	.recipe_name {
+	    		height: 60px;
+	    		h4 {
+	    			font-size: 25px;
+	    			margin-bottom: 20px;
+	    		}
+	    	}
+	    	.cf {
+	    		width: 100%;
+	    		border: none;
+	    		border-top: 1px solid rgb(243, 243, 243);
+	    		margin-top: 55px;
+	    		padding: 20px 0;
+	    		background: white;
+	    		color: $red;
+	    	}
+		}
+	}
+	#get_acard {
+		margin: 65px 0;
+		h1, h2, h3, h4, p { color: white; }
+		h1 { margin-bottom: 30px; }
+		img {
+			margin: 30px 0;
+			width: 100%;
+		}
+		#rf {
+			color: white;
+			background-color: $red;
+			padding: 20px 0;
+			border: 2px solid white;
+			border-radius: 50px;
+			width: 100%;
+		}
+	}
+	#stickers {
+		position: relative;
+		overflow: hidden;
+		@include w_h(100%, 300px);
+		background-color: white;
+		i.fa {
+			z-index: 999;
+			color: rgb(200, 200, 200);
+			font-size: 80px;
+			position: absolute;
+			top: 70%;
+			&:hover { cursor: pointer; }
+			&[class*=left] {
+				left: 0;
+			}
+			&[class*=right] {
+				right: 0;
+			}
+		}
+		.liwrap {
+			display: flex;
+			align-items: center;
+			height: inherit;
+			&.l_queued, &.r_queued {
+				position: absolute;
+			}
+		}
+		.li > i {
+			padding: 0;
+			position: relative;
+			background-color: rgb(240, 240, 240);
+			display: block;
+			@include w_h(105px, 105px);
+			border-radius: 50%;
+			margin: 0 auto ;
+		}
+	}
+	#greenf {
+		background-color: $green;
+		height: 305px;
+		.col-xs-7, .col-xs-5 {
+			h1,p { color: white; display: inline-block; }
+			h1 { font-size: 100px; }
+			p { font-size: 25px; }
+		}
+		.col-xs-7 {
+			height: inherit;
+			background: url(../images/map4.png) no-repeat center center;
+			background-size: cover;
+			img {
+				@include gr_abs(55px, 32%);
+			}
+			h1 {
+				@include gr_abs(60px, 75%);
+			}
+			p {
+				@include gr_abs(187px, 78%);
+			}
+		}
+		.col-xs-5 h1 {
+			@include gr_abs(60px, -5%);
+		}
+	}
+}
+																// ******************** 
+																//						MOBILE FOOTER 
+																//										******************************
+footer {
+	ul:first-child { padding-left: 0; }
+	.footer_categories {
+		padding: 35px 0;
+		border-bottom: 1px solid rgb(105, 113, 118);
+		i.fa { 
+			color: $lrgray;
+			font-size: 50px;
+			float: right;	
+			&:hover {
+				cursor: pointer;
+			}
+		}
+		h1 {
+			color: $lrgray;
+			display: inline-block;
+		}
+		&:last-child { border: none; }
+		.show_links {
+			padding-left: 0;
+			display: none;
+			li {
+				&:first-child { margin-top: 10px;}
+				padding: 10px 0;
+				&:hover {
+					background: $lrgray;
+					border-radius: 25px;
+				}
+				a {
+					padding-left: 20px; 
+					color: white;
+					font-size: 25px;
+					font-weight: 600;
+					letter-spacing: 1.5px;
+				}
+			}
+		}
+	}
+	.container-fluid:last-child {
+		padding: 50px 15px;
+		p {
+			&:first-child { margin-top: 20px; }
+			color: $lrgray;
+			font-size: 18px;
+			letter-spacing: 1.5px;
+		}
+	}
+}
+
+
+@media screen and (min-width: 640px) {
+																// ******************** 
+																//						MOBILE 640px HEADER 
+																//										******************************	
+header {
+	#head_third ul > li > a {
+		font-size: 24px;
+	}
+}
+
+
+}
+@media screen and (min-width: 768px) {
+																// ******************** 
+																//						TRANSITIONAL 768px MAIN 
+																//										******************************
+main {
+	#recipes .img_recipe {
+		width: 84%;
+		margin: 30px 8%;
+	}
+}
+}
+
+
+@media screen and (min-width: 850px) {
+																// ******************** 
+																//						TRANSITIONAL HEADER 
+																//										******************************
+header {
+	#head_second, #head_third > ul, #head_third > ul > li {
+		margin: 0;
+		padding: 0;
+	}
+	
+	#head_first {
+		nav #navb {
+			position: inherit;
+			@include w_h(inherit, 40px);
+			background: transparent;
+			right: 0;
+			.col-xs-3 {
+				width: 15.5% !important;
+			}
+			.col-xs-8 {
+				width: 75% !important;
+				padding: 0;
+				li {
+					display: inline-block;
+				}
+			}
+			.col-xs-1 {
+				width: 9.5% !important;
+			}
+			div[class*=col] {
+				text-align: left;
+			}
+			h3#head_h3_right { float:right; }
+		}
+	}
+	#head_second {
+		height: 80px;
+		img { width: auto;  height: 40px; }
+		#head_third {
+			padding: 0 15px;
+			ul {
+			justify-content: flex-start;
+				li { 
+					padding-right: 50px;
+					a { font-size: 20px; }
+				}
+			}
+		}
+		#bttn_n_search {
+			text-align: right;
+			a.fa { 
+				font-size: 20px; 
+				margin-right: 20%;
+		    }
+		}
+	}
+	#login_bttn {
+		background: transparent;
+		border: 2px solid white;
+		margin: 0;
+		display: inline-block;
+	}
+}
+																// ******************** 
+																//						TRANSITIONAL MAIN 
+																//										******************************
+main {
+	#recipes .img_recipe {
+		width: 80%;
+		margin: 30px 10%;
+	}
+}
+}
+
+
+@media screen and (min-width: 992px) {
+* {
+	.bg_gray { background-color: $bluegray; }
+}
+																// ******************** 
+																//						PC HEADER 
+																//										******************************
+header {
+	#head_first {
+		nav #navb {
+			.col-xs-3 {
+				width: 25% !important;
+			}
+			.col-xs-8 {
+				width: 66.66667% !important;
+				padding: 0 15px;
+			}
+			.col-xs-1 {
+				width: 8.33333% !important;
+			}
+		}
+	}
+}
+																// ******************** 
+																//						PC MAIN 
+																//										******************************
+main {
+	#carousel_head {
+		.carousel-caption.car_c_1 {
+			h3 { margin: 55px 0 75px; }
+			p { margin-top: 100px; }
+		}
+		.item > img {
+		margin-left: 45%;
+		padding-top: 55px;
+		}
+		.item { height:500px; }
+		.carousel-indicators {
+			left: 50%;
+			bottom: -80px;
+		}
+	}
+	#recipes {
+		.img_recipe {
+			width: 30%;
+			margin: 30px 0;
+			&:nth-child(3) {
+				margin: 30px 5% !important;
+			}
+			.col-xs-10 { padding: 0; }
+			.recipe_tags p { 
+				margin: 15px 0; 
+				font-size: 14px;
+				&:first-child:before {
+					width: 20px;
+					height: 18px;
+				}
+			}
+			.recipe_name { 
+				height: 45px;
+				h4 {
+					font-size:20px; 
+					margin-bottom: 10px; 
+				}
+			}
+			.recipe_circle {
+				@include w_h(80px, 80px);
+				bottom: 48%;
+				p { 
+					top: 15%; 
+					left: 10%;
+				}
+			}
+		}
+	}
+	#get_acard {
+		img {
+			display: block;
+			margin: 20px auto 0;
+			width: 90%;
+		}
+		h1 { 
+			font-weight: 800; 
+			font-size: 45px; 
+		}
+		h3 { 
+			font-size: 20px;
+			margin-bottom: 50px; 
+		}
+		#rf { width: 50%; }
+	}
+	#greenf {
+		.col-xs-7 {
+			h1 { left: 82%; }
+			p { left: 84%; }
+		}
+	}
+} 
+																// ******************** 
+																//						PC FOOTER 
+																//										******************************
+footer {
+	.footer_categories {
+		border: none;
+		width: 25%;
+		float: left;
+		.show_links {
+			display: block;
+			padding: 0 10px;
+			li {
+				&:hover {
+					background: none;
+					border: none;
+				}
+				a {
+					padding: 0;
+					font-size: 15px;
+					font-weight: 300;
+				}
+			}
+		}
+		h1 { font-size: 25px; }
+		i.fa { display: none; }
+	}
+	#footer_address {
+		padding-top: 30px;
+		img { height: 40px; }
+		p { 
+			color: white; 
+			&:first-child { 
+				margin-top: 20px; 
+				font-size: 15px; 
+			}
+		}
+	}
+	.container-fluid:last-child {
+		padding: 0 15px 20px;
+	}
+}
+}
+
+
+@media screen and (min-width: 1200px) {
+																// ******************** 
+																//						PC-LG MAIN 
+																//										******************************
+main {
+	#greenf {
+		.col-xs-7 {
+			h1 { left:84%; }
+			p { left: 86%; }
+		}
+	}
+}
+}

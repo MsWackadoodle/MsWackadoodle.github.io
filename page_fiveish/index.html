@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Пятёрочка</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="../bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body><!-- class="navbar-collapse collapse" -->
+<header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="container-fluid">
+				<div class="col-xs-12" id="head_first">
+					<nav class="navbar navbar-default">
+		    			<div id="navb" class="not_visible">
+		    				<div class="col-xs-3">
+			    				<i class="fa fa-map-marker"></i>
+			    				<h3 id="city_">Омск</h3>
+			    				<i class="fa fa-angle-down"></i>
+			    			</div>
+			    			<div class="col-xs-8">
+								<ul class="nav text-center">
+									<li><a href="#">О компании</a></li>
+									<li><a href="#">Акции</a></li>
+									<li><a href="#">Магазины</a></li>
+									<li><a href="#">Новости</a></li>
+									<li><a href="#">Товары</a></li>
+									<li><a href="#">Напишите нам</a></li>
+								</ul>
+							</div>
+							<div class="col-xs-1">
+								<h3 id="head_h3_right">8-800-555-55-05</h3>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12" id="head_second">
+			<div class="col-xs-6">
+				<img src="images/logo.png" alt="">
+			</div>
+			<div class="col-xs-6" id="bttn_n_search">
+				<a href="#" class="fa fa-search" id="main_search"></a>
+				<button type="button" id="bttn" class="navbar-toggle collapsed">
+				    <span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+      			</button>
+			</div>
+		</div>
+		<div class="col-xs-12" id="head_third">
+			<ul>
+				<li><a href="#">Покупателям</a></li>
+				<li><a href="#">Партнёрам</a></li>
+				<li><a href="#">Карьера</a></li>
+			</ul>
+		</div>	
+	</div>			
+</header>	
+<main>
+	<section class="container-fluid" id="carousel_head">
+		<div id="carousel_main" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+		  	<ol class="carousel-indicators">
+			    <li data-target="#carousel_main" data-slide-to="0" class="active"></li>
+			    <li data-target="#carousel_main" data-slide-to="1"></li>
+			    <li data-target="#carousel_main" data-slide-to="2"></li>
+		 	</ol>
+		  	<div class="carousel-inner" role="listbox">
+			    <div class="item active">
+			    	<img src="images/pic_chicken.png" alt="chick">
+				    <div class="carousel-caption car_c_1"> 
+				        <h3>с 30 июня по 6 июля 2015 года</h3>
+				        <h2>Окорочка куриные охлаждённые</h2>
+				        <p>1 кг</p>
+				     </div>
+				     <div class="carousel-caption car_c_2">
+				     	<h3 class="car_old_price">129</h3><br>
+				        <h3 class="car_new_price">101</h3><br>
+				        <h3 class="car_saved_ps">20%</h3>
+				     </div>
+			    </div>
+			     <div class="item">
+			    	<img src="images/pic_chicken.png" alt="chick">
+				    <div class="carousel-caption car_c_1"> 
+				        <h3>с 30 июня по 6 июля 2015 года</h3>
+				        <h2>Окорочка куриные охлаждённые</h2>
+				        <p>1 кг</p>
+				    </div>
+				    <div class="carousel-caption car_c_2">
+				     	<h3 class="car_old_price">129</h3><br>
+				        <h3 class="car_new_price">101</h3><br>
+				        <h3 class="car_saved_ps">20%</h3>
+				    </div>
+			    </div>
+			    <div class="item">
+			    	<img src="images/pic_chicken.png" alt="chick">
+				    <div class="carousel-caption car_c_1"> 
+				        <h3>с 30 июня по 6 июля 2015 года</h3>
+				        <h2>Окорочка куриные охлаждённые</h2>
+				        <p>1 кг</p>
+				    </div>
+				    <div class="carousel-caption car_c_2">
+				     	<h3 class="car_old_price">129</h3><br>
+				        <h3 class="car_new_price">101</h3><br>
+				        <h3 class="car_saved_ps">20%</h3>
+				    </div>
+			    </div>
+			</div>
+		</div>
+	</section>
+	<div class="container-fluid">
+		<section id="social" class="col-xs-12 col-md-12">
+			<a href="#" class="fa fa-vk"></a>
+			<a href="#" class="fa fa-odnoklassniki"></a>
+			<a href="#" class="fa fa-at"></a>
+		</section>
+	</div>
+	<div class="container-fluid bg_lgray grad">
+		<section id="recipes" class="col-xs-12 col-md-12">
+			<div class="col-xs-12">
+				<h2>Наши рецепты</h2>
+				<h3>340 рецептов</h3>
+			</div>
+			<div class="col-xs-12 col-md-4 img_recipe">
+				<img src="images/recipe1.png" alt="">
+				<div class="recipe_circle"><p>160</p></div>
+				<div class="recipe_tags col-xs-10 col-xs-offset-1">
+					<p>вегетарианский, </p>
+					<p>постный</p>
+				</div>
+				<div class="col-xs-10 col-xs-offset-1 recipe_name">
+					<h4>Блинчики с клубникой</h4>
+					<p>0:40</p>
+				</div>
+				<input type="button" value="Подобрать продукты" class="cf">
+			</div>
+			<div class="col-xs-12 col-md-4 img_recipe">
+				<img src="images/recipe1.png" alt="">
+				<div class="recipe_circle"><p>160</p></div>
+				<div class="recipe_tags col-xs-10 col-xs-offset-1">
+					<p>завтрак, </p>
+					<p>простой</p>
+				</div>
+				<div class="col-xs-10 col-xs-offset-1 recipe_name">
+					<h4>Вафли с мёдом</h4>
+					<p>0:40</p>
+				</div>
+				<input type="button" value="Подобрать продукты" class="cf">
+			</div>
+			<div class="col-xs-12 col-md-4 img_recipe">
+				<img src="images/recipe1.png" alt="">
+				<div class="recipe_circle"><p>160</p></div>
+				<div class="recipe_tags col-xs-10 col-xs-offset-1">
+					<p>сытный, </p>
+					<p>сложный</p>
+				</div>
+				<div class="col-xs-10 col-xs-offset-1 recipe_name">
+					<h4>Говяжий стейк с песто и кукурузой</h4>
+					<p>0:40</p>
+				</div>
+				<input type="button" value="Подобрать продукты" class="cf">
+			</div>
+		</section>
+	</div>
+	<div class="container-fluid">
+		<section id="stickers">
+			<i class="fa fa-angle-left"></i>
+			<i class="fa fa-angle-right"></i>
+			
+		</section>
+	</div>
+	<div class="container-fluid">
+		<section id="greenf" class="row">
+			<div class="col-xs-7">
+				<img src="images/patera.png" alt="геопять">
+				<h1>5</h1>
+				<p>магазинов</p>
+			</div>
+			<div class="col-xs-5">
+				<h1>100</h1>
+			</div>
+		</section>
+	</div>
+	<div class="container-fluid bg_red">
+		<section id="get_acard" class="col-xs-12">
+			<h1>Платите меньше</h1>
+			<h3>Станьте частью программы лояльности и получите карту Пятёрочки в любом магазине сети и покупайте дешевле</h3>
+			<img src="images/card.png" alt="получить карту">
+			<input type="button" value="Зарегистрировать карту" id="rf">
+		</section>
+	</div>
+</main>	
+<footer>
+	<div class="container-fluid bg_gray">
+		<section class="col-xs-12" id="footer_links">
+			<ul>
+				<li class="footer_categories">
+					<h1>Покупателям</h1>
+					<i class="fa fa-angle-down"></i>
+					<ul class="show_links">	
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Акции</a></li>
+						<li><a href="#">Магазины</a></li>
+						<li><a href="#">Новости</a></li>
+						<li><a href="#">Товары</a></li>
+						<li><a href="#">Рецепты</a></li>
+					</ul>
+				</li>
+				<li class="footer_categories">
+					<h1>Партнёрам</h1>
+					<i class="fa fa-angle-down"></i>
+					<ul class="show_links">
+						<li><a href="#">Поставщики</a></li>
+						<li><a href="#">Строительство и эксплуатация</a></li>
+						<li><a href="#">Аутстаффинг</a></li>
+						<li><a href="#">Франчайзинг</a></li>
+						<li><a href="#">Субаренда</a></li>
+					</ul>
+				</li>
+				<li class="footer_categories">
+					<h1>Карьера</h1>
+					<i class="fa fa-angle-down"></i>
+					<ul class="show_links">
+						<li><a href="#">Работа для студентов</a></li>
+						<li><a href="#">Истории успеха</a></li>
+						<li><a href="#">Работа в магазине</a></li>
+						<li><a href="#">Работа в офисе</a></li>
+						<li><a href="#">Мероприятия</a></li>
+						<li><a href="#">HR обучение</a></li>
+						<li><a href="#">Работа в логистике</a></li>
+					</ul>
+				</li>
+				<li class="footer_categories">
+					<h1>Обратная связь</h1>
+					<i class="fa fa-angle-down"></i>
+					<ul class="show_links">
+						<li><a href="#">Напишите нам</a></li>
+						<li><a href="#">Закажите звонок</a></li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<div class="container-fluid bg_gray">
+		<section id="footer_address">
+			<div class="col-xs-12">
+				<img src="images/logo2.png" alt="логотип">
+			</div>
+			<div class="col-xs-12">
+				<p>Головной офис:</p>
+				<p>Адрес: 109029, Москва, Средняя</p>
+				<p>Калитниковская ул., д.28, стр.4. Телефон:</p>
+				<p>(495) 662-88-88</p>
+			</div>
+		</section>
+	</div>
+</footer>		
+</body>		

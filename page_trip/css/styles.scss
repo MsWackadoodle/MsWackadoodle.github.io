@@ -1,0 +1,609 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+@import '../../bower_components/bootstrap-sass/assets/stylesheets_trip/_bootstrap.scss';
+@font-face {
+    font-family: BigNoodle;
+    src: url(../fonts/big_noodle_titling.ttf) format('truetype');
+}
+
+$hei_nav: 110px;
+$hei_top: 930px;
+$hei_top_blue: 190px;
+$hei_find: 700px;
+$hei_deals: 880px;
+$hei_promo: 260px;
+$hei_promo_covers: 810px;
+$hei_news: 900px;
+$hei_luxury: 700px;
+$hei_footer: 330px;
+
+@mixin marg($top, $bottom) {
+	margin-top: $top;
+	margin-bottom: $bottom;
+}
+@mixin vert-al {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+* {
+	h1, h2, h3, h4, p { margin: 0; }
+	font-family: 'Open Sans', sans-serif;
+	.uniq_section_header { font-family: 'BigNoodle'; }
+	.default_input__text {
+		@include marg(0px, 25px);
+		background-color: rgb(242, 242, 242);
+		padding: 20px;
+		border-radius: 4px;
+		border: none;
+	}
+	.default_input__button {
+		background: rgb(0, 111, 230);
+		color: white;
+		text-align: center;
+		text-transform: uppercase;
+		padding: 22px 0 15px;
+		border: none;
+	}
+} 
+header, main { i.fa { font-size: 22px; } }
+header {
+	#header { 
+		background: rgba(0, 0, 0, 0.5); 
+		padding: 0;
+		position: absolute;
+    	top: 0;
+    	z-index: 999;
+	}
+	#header_contact, #header_social {
+		text-align: center;
+		border-bottom: 1px solid rgb(203, 203, 203);
+		padding: 6px 15px;
+	}
+	#header_contact {
+		i {
+			color: white;
+			margin-right: 10px;
+		}
+		a, p {
+			color: white;
+			margin-right: 20px;
+			display: inline-block;
+		}
+	}
+	#header_social {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		ul {
+			margin: 0;
+			padding: 0;
+			display: flex;
+		    justify-content: space-between;
+		    width: 50%;
+			li {
+			display: inline-block;
+			list-style: none;
+			a {
+				color: white;
+			}
+			}
+		}
+	}
+	#header_toggle {
+		color: white;
+		padding: 12px 15px 5px;
+		.col-xs-1 {
+			padding: 0 0 0 15px; 
+			margin-top: 2px;
+		}
+		h1, h2 { text-transform: uppercase; }
+		h1 { 
+			 font-size: 25px;
+			span { color: rgb(0, 123, 255); }
+		}
+		h2 {
+			font-size: 15px;
+		}
+		i {
+			color: white;
+			font-size: 40px;
+		}
+		#bttn {
+			background: rgb(0, 111, 230);
+			margin-right: 0;
+			.icon-bar { background: white; }
+		}
+	}
+	#header_navbar {
+		padding: 0;
+		display: none;
+	    margin: 0;
+			ul {
+				background: white;
+				li {
+					&:hover {
+						background: rgb(203, 203, 203);
+					}
+					a { 
+						z-index: 99;
+						padding-left: 30px;
+						&:hover { background: transparent; }
+					}
+					i.fa { 
+						position: absolute !important;
+						right: 35px;
+						@include vert-al;
+					}
+				}
+			}
+	}
+}
+main {
+	#top_ad-searchtours {
+		background: url(../images/bg_top.png) center center;
+		background-size: cover;
+		position: relative;
+		.col-xs-12:first-child {
+			text-align: center;
+			color: white;
+			h2 { 
+				@include marg(200px, 25px);
+				font-family: 'BigNoodle';
+			}
+			h3 { margin-bottom: 30px; }
+		}
+		.col-xs-12:nth-child(2) {
+			margin-bottom: 60px;
+			form {
+				display: block;
+				position: relative;
+				width: 80%;
+				max-width: 600px;
+				margin: 0 auto;
+				padding-bottom: 60px;
+				background: white;
+				color: rgb(96, 96, 96);
+				h1 {
+					padding-top: 35px;
+					margin-bottom: 15px;
+					text-align: center;
+					font-family: 'BigNoodle';
+				}
+				p { 
+					text-align: center;
+					margin-bottom: 22px; 
+				}
+				input {
+					display: block;
+					width: 84%;
+					margin-left: auto;
+					margin-right: auto;
+					border: none;
+				}
+				i.fa {
+					font-size: 25px !important;
+					position: absolute;
+					right: 13%;
+					&:first-of-type { top: 150px; }
+					&:nth-of-type(2) { top: 235px; }
+					&:nth-of-type(3) { top: 317px; right: 11%; }
+					&:nth-of-type(4) { top: 402px; right: 12%; }
+				}
+			}
+		}
+		.col-xs-12:last-child {
+			background-color: rgb(71, 160, 255);
+			opacity: 0.8;
+			height: $hei_top_blue;
+			display: none;
+			p { 
+				@include vert-al; 
+				color: white;
+				font-size: 1em;
+			}
+		}
+	}
+	#find_a_tour {
+		background: url(../images/bg_lake.png) center center;
+		background-size: cover;
+		padding: 60px 15px;
+		text-align: center;
+		h1 { 
+			margin-bottom: 35px; 
+		}
+		p { 
+			width: 80%;
+			margin: 0 auto 60px;.
+			font-size: 25px;
+		}
+		.col-xs-12 {
+			.col-md-3 {
+				margin-bottom: 40px;
+				.wrap {
+					display: block;
+					width: 270px;
+					height: 270px;
+					border-radius: 50%;
+					background-size: cover;
+					margin: 0 auto;
+					h3 {
+						text-transform: uppercase;
+						font-family: 'BigNoodle';
+						@include vert-al;
+						color: white;
+						font-size: 38px;
+					}
+				}
+			}
+			
+			.col-md-3:first-child  .wrap { background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/tour_1.png) center center / cover; }
+			.col-md-3:nth-child(2) .wrap { background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/tour_2.png) center center / cover; }
+			.col-md-3:nth-child(3) .wrap { background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/tour_3.png) center center / cover; }
+			.col-md-3:nth-child(4) .wrap { background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/tour_4.png) center center / cover; }
+		}
+	}
+	#deals { 
+		background: url(../images/bg_trees_blue.png) center center;
+		background-size: cover;
+		padding: 60px 15px;
+		h1 {
+			text-align: center;
+			margin-bottom: 35px;
+			color: white;
+		}
+		.col-md-4 {
+			background: white;
+			padding: 0;
+			margin-bottom: 60px;
+			text-align: center;
+			img {
+				width: 100%;
+			}
+			.spanbox {
+				display: block;
+				width: 40%;
+				margin: 0 auto;
+				background: rgb(71, 160, 255);
+				position: relative;
+				top: -23px;
+				h3, h4 { 
+					display: inline-block;  
+					padding: 10px 5px;
+					font-family: 'BigNoodle';
+					color: white;
+				}
+			}
+			h2 { 
+				font-family: 'BigNoodle';
+				margin-top: 45px; 
+			}
+			p { 
+				width: 70%;
+				margin: 20px auto 55px;.
+				font-size: 25px;
+			}
+			input {
+				background: rgb(0, 111, 230);
+				color: white;
+				text-align: center;
+				text-transform: uppercase;
+				padding: 22px 0 15px;
+				width: 55%;
+				border: none;
+				border-radius: 7px;
+				margin-bottom: 40px;
+			}
+		}
+	}
+	#promo {
+		text-align: center;
+		h1 {
+			@include marg(110px, 100px)
+		}
+		.col-xs-6 {
+			width: 49%;
+			@include marg(1%, 1%);
+			h2, p { 
+				color: white; 
+				@include vert-al; 
+			}
+			h2 { text-transform: uppercase; }
+			&:nth-of-type(1) { background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/cover_1.png) center center / cover; }
+			&:nth-of-type(2) { background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/cover_2.png) center center / cover; }
+			&:nth-of-type(3) { background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/cover_3.png) center center / cover; }
+			&:nth-of-type(4) { background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/cover_4.png) center center / cover; }
+			&:nth-of-type(5) { background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/cover_5.png) center center / cover; }
+			&:nth-of-type(6) { background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/cover_6.png) center center / cover; }
+			&:nth-of-type(odd) { margin-right: 1% }
+			&:nth-of-type(even) { margin-left: 1% }
+		}
+	}
+	#news {
+		background: rgb(235, 235, 235);
+		h1, .container > p { text-align: center; }
+		.container > p { margin-bottom: 50px }
+		h1 { @include marg(100px, 50px) }
+		.col-md-4 {
+			background: white;
+			margin-bottom: 60px;
+			img {
+				width: 100%;
+				padding: 15px 0;
+			}
+		}
+		a { 
+			display: inline-block; 
+			width: 40%; 
+		}
+		.news_utility {
+			display: inline;
+			p { display: inline-block; } 
+		}
+		i.fa-calendar {
+			margin-left: 15%;
+		}
+		.news_text {
+			width: 60%;
+			height: 60px;
+			@include marg(20px, 30px);
+			display: inline-block;
+			margin-left: 40%;
+		}
+	}
+	#pre_footer_adv {
+		text-align: center;
+		color: white;
+		background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/bg_bottom.png) center center / cover;
+		h1, h2 { font-family: 'BigNoodle'; }
+		h1 {
+			@include marg(60px, 20px)
+		}
+		input {
+			display: block;
+			width: 160px;
+			height: 160px;
+			margin: 25px auto 60px;
+			border-radius: 50%;
+			border: none;
+			text-align: center;
+			text-transform: uppercase;
+			background: rgb(71, 160, 255);
+		}
+	}
+}
+footer {
+	padding: 60px 0 20px;
+	#footer_info {
+		.footer_section_header { 
+		font-family: 'BigNoodle';
+		font-size: 28px; 
+		height: 100px;
+		}
+		.col-xs-7 > a {
+			display: inline-block;
+			text-align: center;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			margin-right: 12px;
+			border-radius: 50%;
+			background: rgb(71, 160, 255);
+			i { color: white; }
+		}
+		.col-xs-7 {
+			input[type="email"] {
+				width: 100%;
+			}
+			input[type="button"] {
+				position: absolute;
+			    width: 70px;
+			    height: 51px;
+			    right: 20px;
+			    top: 4px;
+			    border-radius: 4px;
+			    padding: 0;
+			}
+		}
+	}
+	#footer_copyright {
+		.col-xs-12 {
+			padding-top: 20px;
+			border-top: 1px solid rgb(208, 208, 208);
+			div:first-child { float: left; }
+			div:last-child { 
+				float: right; 
+				p:last-child {
+					margin-top: 7px;
+					&:before {
+						display: inline-block;
+						content: '';
+						background: url(../images/free_bee.png) center center;
+						width: 29px;
+						height: 26px;
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+//special non mobile-first style only for 480px width  
+@media screen and (max-width: 480px) {
+	header #header_contact {
+		i { margin-right: 3px; }
+	}
+	main {
+		#deals .col-md-4 {
+			h2 { margin-top: 5px; }
+			p { margin-bottom: 25px; }
+		}
+		#promo {
+			h1 { @include marg(55px, 50px); }
+			.col-xs-6 {
+				h2 { font-size: 25px; }
+			}
+		}
+		#news {
+			h1 { @include marg(55px, 50px); }
+		}
+	}
+	footer {
+		#footer_info {
+			.col-xs-7 > a { margin-right: 2px; }
+		}
+		#footer_copyright .col-xs-12 {
+			div:first-child, div:last-child {
+				float: none;
+				text-align: center;
+			}
+			div:last-child { margin-top: 15px; }
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	header, main { i.fa { font-size: 18px; } }
+	header {
+		#header_contact {
+			width: 65%;
+			text-align: left;
+			a { margin-right: 10px; }
+		}
+		#header_social { 
+			width: 35%; 
+			ul { width: 100%; }
+		}
+		#header_toggle { 
+			width: 35%; 
+			.col-xs-1 { width: auto; }
+		}
+		#header_navbar {
+			width: 65%;
+			padding: 12px 15px 5px;
+			display: block;
+			ul {
+				background: transparent;
+				li {
+					display: inline-block;
+					a { 
+						padding-left: 15px; 
+						color: white;
+					}
+					i.fa { display: none; }
+				}	
+			}
+		}
+	}
+	main {
+		#find_a_tour {
+			.col-xs-12 .col-md-3 { width: 50%; }
+		}
+		#deals {
+			.col-md-4 {
+				width: 32%;
+				&:nth-child(3) { margin: 0 2%; }
+				h2 { margin-top: 0; }
+			}
+		}
+		#news {
+			.col-md-4 {
+				width: 80%;
+				display: block;
+				float: none;
+				margin: 0 auto 60px;
+			}
+		}
+	}
+}
+@media screen and (min-width: 992px) {
+	header {
+		#header_contact { i.fa-phone { padding-left: 15px; } }
+		#header_social { ul { padding-right: 15px; } }
+		#header_navbar {
+			ul { 
+				text-align: right; 
+				li > a { font-size: 22px; }
+			}
+		}
+	}
+	main {
+		#top_ad-searchtours {
+			.col-xs-12:first-child h2 { 
+				margin-top: 415px; 
+				font-size: 50px;
+			}
+			.col-xs-12:nth-child(2) form {
+				margin-top: 215px;
+			}
+		}
+	}
+}
+@media screen and (min-width: 1024px) {
+	main {
+		#find_a_tour {
+			.col-xs-12 .col-md-3 {
+				width: 25%;
+				.wrap { width: 100% !important; }
+			}
+		}
+		#promo {
+			.col-xs-6 { 
+				&:nth-of-type(odd), &:nth-of-type(even) {
+					margin: 0;
+					width: 33.3333%;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	main {
+		#find_a_tour {
+			.col-xs-12 .col-md-3 { width: 25%; }
+		}
+		#news {
+			.col-md-4 {
+				float: left;
+				width: 32%;
+				&:nth-child(4) { margin: 0 2%; }
+			}
+			a { 
+				width: 100%; 
+				margin-bottom: 25px;
+			}
+			.news_text {
+				margin-left: 0;
+				width: 100%; 
+			}
+		} 
+	}
+	footer {
+		#footer_info {
+			.col-md-3 {
+				margin-bottom: 90px;
+				.footer_section_header {
+					height: auto;
+					margin-bottom: 40px;
+				}
+			}
+		}
+		#footer_copyright .col-md-12 {
+			div:first-child, div:last-child {
+				p { display: inline; }
+			}
+			div:first-child p { line-height: 41px; }
+		}
+	}
+}
+@media screen and (min-width: 1500px) {
+	//wtf
+	* {
+		.container-fluid { width: 100%; }
+	}
+}

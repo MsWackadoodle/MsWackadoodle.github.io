@@ -1,0 +1,165 @@
+@import url(https://fonts.googleapis.com/css?family=Asap:400,400italic,700,700italic);
+* {
+  font-family: 'Asap', sans-serif; }
+  * h1, * h2, * h3, * h4, * p {
+    margin: 0; }
+  * .bluebttn {
+    margin-top: 45px;
+    padding: 18px 43px;
+    background: #49b9e6;
+    border: none;
+    border-radius: 5px;
+    color: white; }
+
+header h1, header h3, header p {
+  color: white; }
+header .container-fluid {
+  background: url(../images/b_main.png) center center;
+  background-size: cover; }
+header #thetitle {
+  padding-top: 40px; }
+  header #thetitle h3 {
+    display: inline-block; }
+  header #thetitle img {
+    margin-top: -5px; }
+header #top_desc h1 {
+  margin: 0; }
+header #top_desc h1:first-child {
+  margin-top: 150px; }
+header #top_desc h1:nth-child(2) {
+  margin: 15px 0 32px; }
+header #top_img {
+  margin-bottom: 70px; }
+  header #top_img #top_social {
+    position: absolute;
+    bottom: 20px;
+    left: -95%; }
+
+main #lab_desc {
+  background: #0084b8; }
+  main #lab_desc .col-md-4 {
+    margin: 110px 0;
+    text-align: center;
+    color: white; }
+    main #lab_desc .col-md-4:first-child img {
+      margin-top: 18px;
+      margin-left: 6px; }
+    main #lab_desc .col-md-4:last-child img {
+      margin-top: 13px; }
+    main #lab_desc .col-md-4 h2 {
+      margin: 19px 0 3px;
+      font-size: 42px; }
+main #main_adv #first_line {
+  margin-top: 135px;
+  margin-bottom: 145px; }
+  main #main_adv #first_line img {
+    display: block;
+    margin: 55px auto 0; }
+  main #main_adv #first_line .text {
+    text-align: left; }
+    main #main_adv #first_line .text h4 {
+      margin: 45px 0 40px; }
+    main #main_adv #first_line .text p.cit {
+      background: #ecf0f1;
+      border-radius: 10px;
+      padding: 32px 35px;
+      margin-bottom: 20px;
+      color: #828485; }
+    main #main_adv #first_line .text a {
+      padding-left: 35px; }
+    main #main_adv #first_line .text img {
+      position: absolute;
+      bottom: 0;
+      right: -20px; }
+main #main_adv #second_line {
+  margin-bottom: 90px; }
+  main #main_adv #second_line img {
+    width: 100%; }
+  main #main_adv #second_line h1 {
+    margin-top: 55px; }
+  main #main_adv #second_line p {
+    margin: 35px 0 45px; }
+main #heroes {
+  background-color: #ecf0f1; }
+  main #heroes .col-md-4 {
+    margin-top: 120px;
+    margin-bottom: 140px;
+    text-align: center; }
+    main #heroes .col-md-4 img {
+      height: 140px; }
+    main #heroes .col-md-4 h2 {
+      margin-top: 18px; }
+    main #heroes .col-md-4 h3 {
+      margin: 11px 0 40px; }
+    main #heroes .col-md-4 p {
+      display: block;
+      margin: 0 auto;
+      width: 60%;
+      height: 140px;
+      overflow: hidden; }
+    main #heroes .col-md-4:nth-child(2) img {
+      position: relative;
+      left: -18px; }
+main #sharelike {
+  text-align: center;
+  background: #f1c40f; }
+  main #sharelike h3 {
+    color: white;
+    margin: 55px 25px;
+    display: inline-block; }
+  main #sharelike i {
+    color: white;
+    font-size: 30px;
+    vertical-align: middle; }
+
+footer .container-fluid {
+  background: #d8af0c; }
+  footer .container-fluid .col-md-4 {
+    margin-top: 65px;
+    margin-bottom: 45px;
+    text-align: left; }
+    footer .container-fluid .col-md-4 h3, footer .container-fluid .col-md-4 p {
+      color: white; }
+
+@media screen and (max-width: 700px) {
+  header #top_img #top_social {
+    width: 85%;
+    bottom: 10px; }
+
+  main #heroes .col-md-4:nth-child(2) img {
+    left: -32px; }
+
+  footer .container-fluid .col-md-4 {
+    width: 70%;
+    margin: 20px 15%; }
+    footer .container-fluid .col-md-4 img {
+      width: inherit !important;
+      display: block;
+      margin: 0 auto; } }
+@media screen and (max-width: 768px) {
+  header #top_desc h1:first-child {
+    margin-top: 70px; }
+  header #top_img {
+    margin-bottom: 50px; }
+    header #top_img img {
+      height: 420px !important; }
+
+  footer .container-fluid .col-md-4 img {
+    width: 100%; }
+  footer .container-fluid .col-md-4 .col-xs-8 {
+    padding: 0; } }
+@media screen and (max-width: 991px) {
+  header #top_img img {
+    display: block;
+    margin: 0 0 0 auto;
+    height: 525px; }
+  header #top_img #top_social h3 {
+    font-size: 14px; }
+
+  main #main_adv #first_line {
+    margin-bottom: 50px; }
+    main #main_adv #first_line img:first-child {
+      height: 250px;
+      margin-left: 0; }
+  main #heroes .col-md-4 p {
+    width: 80%; } }
