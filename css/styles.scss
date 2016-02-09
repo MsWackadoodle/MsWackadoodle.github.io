@@ -1,4 +1,5 @@
 @import 'keyframes.scss';
+
 @mixin calc($key, $value) {
   #{$key}: -webkit-calc(#{$value});
   #{$key}: -moz-calc(#{$value});
@@ -9,7 +10,7 @@ body {
 	height: 100vh;
 	margin: 0;
 	overflow: hidden;
-
+	background: url(../images/bg.png) 0 0 / cover;
 	font-family: 'Exo 2', sans-serif;
 	h1, h2, h3, p, a { color: black; }
 } 
@@ -52,6 +53,7 @@ main {
 		ul {
 			margin: 0;
 			padding: 0 2vw 0 0;
+			// 9 vh -- 
 			@include calc("padding-top", "9vh + 41px");
 			text-align: right;
 			li {
@@ -84,7 +86,8 @@ main {
 		#what {
 			display: none;
 			width: 100%;
-			padding: 0 2vw;
+			padding-left: 2vw;
+			padding-right: 2vw;
 			.row {
 				display: flex;
 				justify-content: space-around;
@@ -104,13 +107,20 @@ main {
 		#workfolio {
 			width: 100%;
 			display: none;
+			text-align: center;
+			h1 {
+				padding: 0 5vw 0 2.5vw;
+				margin-top: 10vh;
+				font-weight: 300;
+			}
+			a { margin-right: 20px; }
 			ul {
 				display: flex;
-				
-				height: 80vh;
+				margin: 0;
+				height: 50vh;
 				justify-content: space-around;
 				align-items: center;
-				padding: 0 5vw 0 2.5vw;
+				padding: 9vh 5vw 0 2.5vw;
 				li {
 					list-style: none;
 					&:first-child { align-self: flex-start; }
@@ -140,12 +150,38 @@ main {
 		}
 	}
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 992px) {
 	main {
+		#main_menu {
+			ul li a {
+				font-size: 1.5em;
+			}
+		}
 		#action_area {
 			align-items: flex-start;
 			& > section {
 				@include calc("padding-top", "9vh + 41px");
+				padding-bottom: 10vh;
+			}
+			#what {
+				h1 { font-size: 1.8em; }
+				h2 { font-size: 1.5em; }
+				h3 { font-size: 1.3em; }
+				h4 { font-size: 1em; }
+			}
+			#workfolio {
+				height: auto;
+				ul  {
+					height: auto;
+					padding-top: 0;
+					align-items: initial;
+					& > li { 
+						align-self: initial !important; 
+						&:nth-child(2) { margin-top: 5vh; }
+						&:nth-child(3) { margin-top: 10vh; }
+						&:nth-child(4) { margin-top: 15vh; }
+					}
+				}
 			}
 		}
 	}
