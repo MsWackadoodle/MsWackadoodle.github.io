@@ -10,7 +10,7 @@ body {
 	height: 100vh;
 	margin: 0;
 	overflow: hidden;
-	background: url(../images/bg.png) 0 0 / cover;
+	background: linear-gradient(rgba(248, 248, 255, 0.9), rgba(248, 248, 255, 0.9)), url(../images/bg.png) 0 0 / cover;
 	font-family: 'Exo 2', sans-serif;
 	h1, h2, h3, p, a { color: black; }
 } 
@@ -27,9 +27,9 @@ main {
 		z-index: 99;
 		&:focus { outline: none; }
 		span {
-			background: black none repeat scroll 0% 0%;
-			width: 40px;
-			height: 4px;
+			background: black;
+			width: 55px;
+			height: 8px;
 			margin-top: 9px !important;
 			display: block;
 		}

@@ -21,7 +21,7 @@ $(document).ready(function() {
 				$menu.hide('fold', 1000);
 				$action_area.hide();
 				$bttn.delay(1000).show(0, function() {
-					$bod.css('background', 'url(images/bg.png) 0 0 / cover');
+					$bod.css('background', 'linear-gradient(rgba(248, 248, 255, 0.9), rgba(248, 248, 255, 0.9)), url(images/bg.png) 0 0 / cover');
 				}).addClass('pulse2');
 			});
 		});
